@@ -84,6 +84,18 @@ body {
 }
 
 /* Ponteiros */
+.clock::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  z-index: 11;
+  background-color: black;
+  transform: translate(-50%,-50%);
+}
 
 .clock .hand {
   --rotation: 0;
@@ -105,12 +117,12 @@ body {
   z-index: 1;
 }
 .clock .hand.minutes {
-  width: 5px;
+  width: 6px;
   height: 38%;
-  background-color: #011F26;
+  background-color: black;
 }
-.clock .hand.seconds {
-  width: 5px;
+.clock .hand.seconds { 
+  width: 4px;
   height: 40%;
   background-color: red;
 }
